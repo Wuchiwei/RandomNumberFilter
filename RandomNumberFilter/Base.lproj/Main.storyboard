@@ -53,6 +53,9 @@
                                 <state key="normal" title="Run">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="generateRandomNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebv-z9-dNe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,6 +78,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="P5t-ia-Zr6" id="YDi-wQ-WQK"/>
+                        <outlet property="mutipleOfFiveLabel" destination="hAJ-yL-I2n" id="ceJ-J5-hLi"/>
+                        <outlet property="mutipleOfThreeLabel" destination="aAK-t1-kfI" id="XMS-bB-JhQ"/>
+                        <outlet property="mutipleOfTwoLabel" destination="1Ty-ab-xFc" id="gBG-nv-avj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
