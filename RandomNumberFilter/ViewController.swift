@@ -12,11 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var hintLabel: UILabel!
     
-    @IBOutlet weak var mutipleOfTwoLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     
-    @IBOutlet weak var mutipleOfThreeLabel: UILabel!
-    
-    @IBOutlet weak var mutipleOfFiveLabel: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var randomNumberArray: [Int] = []
     
@@ -30,11 +28,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        mutipleOfTwoLabel.text = ""
+        contentLabel.text = ""
         
-        mutipleOfThreeLabel.text = ""
+        segmentedControl.isHidden = true
+    }
+    
+    @IBAction func changeInfo(_ sender: UISegmentedControl) {
         
-        mutipleOfFiveLabel.text = ""
+        updateContentLabel()
     }
 
     @IBAction func generateRandomNumber(_ sender: UIButton) {
@@ -70,12 +71,25 @@ class ViewController: UIViewController {
         
         hintLabel.text = "Array 為 \(randomNumberArray)"
         
-        mutipleOfTwoLabel.text = "2 的倍數有：\(mutipleOfTwoArray)"
+        updateContentLabel()
         
-        mutipleOfThreeLabel.text = "3 的倍數有：\(mutipleOfThreeArray)"
-        
-        mutipleOfFiveLabel.text = "5 的倍數有：\(mutipleOfFiveArray)"
+        segmentedControl.isHidden = false
     }
-    
+
+    func updateContentLabel() {
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            
+            contentLabel.text = "2 的倍數有：\(mutipleOfTwoArray)"
+            
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            
+            contentLabel.text = "3 的倍數有：\(mutipleOfThreeArray)"
+            
+        } else if segmentedControl.selectedSegmentIndex == 2 {
+            
+            contentLabel.text = "5 的倍數有：\(mutipleOfFiveArray)"
+        }
+    }
 }
 

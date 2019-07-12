@@ -25,25 +25,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ty-ab-xFc">
-                                <rect key="frame" x="50" y="261.5" width="314" height="28"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAK-t1-kfI">
-                                <rect key="frame" x="50" y="339.5" width="314" height="28"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAJ-yL-I2n">
-                                <rect key="frame" x="50" y="417.5" width="314" height="28"/>
+                                <rect key="frame" x="50" y="361.5" width="314" height="28"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vz-i3-kqy">
-                                <rect key="frame" x="157" y="512.5" width="100" height="40"/>
+                                <rect key="frame" x="157" y="622" width="100" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4oJ-c9-Qmh"/>
@@ -57,32 +45,39 @@
                                     <action selector="generateRandomNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebv-z9-dNe"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dpm-6s-sXl">
+                                <rect key="frame" x="50" y="261.5" width="314" height="29"/>
+                                <segments>
+                                    <segment title="2 的倍數"/>
+                                    <segment title="3 的倍數"/>
+                                    <segment title="5 的倍數"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeInfo:" destination="BYZ-38-t0r" eventType="valueChanged" id="qx7-q6-Cia"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hAJ-yL-I2n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1v8-Rc-iSn"/>
-                            <constraint firstItem="3Vz-i3-kqy" firstAttribute="top" secondItem="hAJ-yL-I2n" secondAttribute="bottom" constant="67" id="2bE-uN-rmk"/>
                             <constraint firstItem="3Vz-i3-kqy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2yh-wy-gMg"/>
-                            <constraint firstItem="aAK-t1-kfI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5jx-cv-EoK"/>
+                            <constraint firstItem="dpm-6s-sXl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Geg-Yf-2LF"/>
                             <constraint firstItem="P5t-ia-Zr6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Hg2-jw-lJe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ty-ab-xFc" secondAttribute="trailing" constant="50" id="JeZ-48-NP6"/>
-                            <constraint firstItem="aAK-t1-kfI" firstAttribute="top" secondItem="1Ty-ab-xFc" secondAttribute="bottom" constant="50" id="LhS-9O-vDv"/>
                             <constraint firstItem="P5t-ia-Zr6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Moe-3h-PQH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aAK-t1-kfI" secondAttribute="trailing" constant="50" id="PsZ-T2-3x2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Vz-i3-kqy" secondAttribute="bottom" constant="200" id="Sdu-1B-hol"/>
                             <constraint firstItem="1Ty-ab-xFc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Sxx-ih-rjf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hAJ-yL-I2n" secondAttribute="trailing" constant="50" id="Yk4-Wb-kHf"/>
-                            <constraint firstItem="hAJ-yL-I2n" firstAttribute="top" secondItem="aAK-t1-kfI" secondAttribute="bottom" constant="50" id="bYR-fa-Jle"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dpm-6s-sXl" secondAttribute="trailing" constant="50" id="aEW-tL-HVm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="P5t-ia-Zr6" secondAttribute="trailing" constant="100" id="fSG-XS-3EO"/>
                             <constraint firstItem="P5t-ia-Zr6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="gOA-UW-kfh"/>
-                            <constraint firstItem="1Ty-ab-xFc" firstAttribute="top" secondItem="P5t-ia-Zr6" secondAttribute="bottom" constant="50" id="xvO-Ta-60J"/>
+                            <constraint firstItem="dpm-6s-sXl" firstAttribute="top" secondItem="P5t-ia-Zr6" secondAttribute="bottom" constant="50" id="sLs-Wm-jY3"/>
+                            <constraint firstItem="1Ty-ab-xFc" firstAttribute="top" secondItem="P5t-ia-Zr6" secondAttribute="bottom" constant="150" id="xvO-Ta-60J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="contentLabel" destination="1Ty-ab-xFc" id="ReA-hs-2Oc"/>
                         <outlet property="hintLabel" destination="P5t-ia-Zr6" id="YDi-wQ-WQK"/>
-                        <outlet property="mutipleOfFiveLabel" destination="hAJ-yL-I2n" id="ceJ-J5-hLi"/>
-                        <outlet property="mutipleOfThreeLabel" destination="aAK-t1-kfI" id="XMS-bB-JhQ"/>
-                        <outlet property="mutipleOfTwoLabel" destination="1Ty-ab-xFc" id="gBG-nv-avj"/>
+                        <outlet property="segmentedControl" destination="dpm-6s-sXl" id="OY4-bZ-uba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
